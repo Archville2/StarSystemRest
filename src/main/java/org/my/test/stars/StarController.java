@@ -15,20 +15,20 @@ public class StarController {
 
     public String testClass(
             @RequestParam(value="command", defaultValue = "n/a") String command,
-            @RequestParam(value="name", defaultValue = "n/a") String name,
-            @RequestParam(value="name2", defaultValue = "n/a") String name2,
-            @RequestParam(value="name3", defaultValue = "n/a") String name3){
+            @RequestParam(value="star", defaultValue = "n/a") String star,
+            @RequestParam(value="planet", defaultValue = "n/a") String planet,
+            @RequestParam(value="moon", defaultValue = "n/a") String moon){
 
         if (command.equals("AddStar")){
-            return commandExecution.restExecuteAddStar(name);
+            return commandExecution.restExecuteAddStar(star);
         }
 
         if (command.equals("AddPlanet")){
-            return commandExecution.restExecuteAddPlanet(name, name2);
+            return commandExecution.restExecuteAddPlanet(star, planet);
         }
 
         if (command.equals("AddMoon")){
-            return commandExecution.restExecuteAddMoon(name, name2, name3);
+            return commandExecution.restExecuteAddMoon(star, planet, moon);
         }
 
         if (command.equals("PrintStars")) {
@@ -40,7 +40,7 @@ public class StarController {
         }
 
         if (command.equals("PrintMoons")){
-            return commandExecution.restExecutePrintMoons(name);
+            return commandExecution.restExecutePrintMoons(planet);
         }
 
         if (command.equals("PrintAll")){
