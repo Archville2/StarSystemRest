@@ -1,0 +1,35 @@
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+  <title>Star System</title>
+
+  </head>
+  
+  <body>
+ 
+  <form name="f1" id="f1" action="http://localhost:8080/" method="POST" target="my_iframe">
+  
+  <p><b>Star name:</b><br>
+    <input type="text"  name="star" style="height:20; width:100" />
+  </p>
+  <p><b>Planet name:</b><br>
+    <input type="text"  name="planet" style="height:20; width:100" />
+  </p>
+  <p><b>Moon name:</b><br>
+    <input type="text"  name="moon" style="height:20; width:100" />
+  </p>
+  
+  <p><button type="submit" value="AddStar" name="command" style="height:20; width:100">AddStar</button></p>
+  <p><button type="submit" value="AddPlanet" name="command" style="height:20; width:100">AddPlanet</button></p>
+  <p><button type="submit" value="AddMoon" name="command" style="height:20; width:100">AddMoon</button></p>
+  <p><button type="submit" value="PrintMoons" name="command" style="height:20; width:100">PrintMoons</button></p>
+  <p><button type="submit" value="PrintAll" name="command" style="height:20; width:100">PrintAll</button></p>
+  
+  </form>
+	
+  <iframe name="my_iframe" width="300" height="400"></iframe>
+   
+  </body>
+</html>
+
